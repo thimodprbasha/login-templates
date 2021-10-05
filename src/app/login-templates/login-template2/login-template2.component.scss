@@ -1,0 +1,26 @@
+
+  img {
+    margin: auto;
+    // max-width: fit-content;
+    max-height: 100vh;
+    // display: block;
+    // width: ;
+  }
+
+  
+@media screen and (max-width: 1388px) {
+	// .carousel-hide {
+	// 	visibility: hidden;
+    //     display: none;
+	// }
+}
+
+@media screen and (max-width: 320px) {
+	.my-login-page .card.fat {
+		padding: 0;
+	}
+
+	.my-login-page .card.fat .card-body {
+		padding: 15px;
+	}
+}
