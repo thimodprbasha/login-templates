@@ -7,13 +7,14 @@ import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/n
   styleUrls: ['./login-template2.component.scss']
 })
 export class LoginTemplate2Component implements OnInit {
-  images = [2,3].map((n) => `../../../assets/bg_${n}.jpg`);
 
   paused = false;
   unpauseOnArrow = false;
-  pauseOnIndicator = false;
+  pauseOnIndicator = false; //Carousel arrows and indicators 
   pauseOnHover = true;
   pauseOnFocus = true;
+
+  hide = true; //matinput password hide 
 
   constructor() { }
 

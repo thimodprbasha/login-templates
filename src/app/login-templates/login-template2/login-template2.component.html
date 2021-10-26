@@ -1,64 +1,69 @@
-
 <div class="row">
-    <div class="col-md-6" style="background-color: #f7f9fb;;">
-        <!-- <div class="my-login-page d-lg-flex half"> -->
-            <div class="container h-100">
-                <div class="row align-items-center h-100">
-                    <div class="col-md-6 mx-auto" >
-                        <div class="card" style="width: 25rem;">
-                            <!-- <img class="card-img-top" src="../../../assets/logo.jpg" alt="Card image cap"> -->
-                            <div class="card-body">
-                                <h2 class="card-title mb-4 mt-1 font-weight-bold">Sign in</h2>
-                                <form>
-                                    <div class="form-group">
-                                        <label>Your email</label>
-                                        <input name="" class="form-control" placeholder="Email" type="email">
-                                    </div> <!-- form-group// -->
-                                    <div class="form-group">
-                                        <a class="float-right" href="#">Forgot?</a>
-                                        <label>Your password</label>
-                                        <input class="form-control" placeholder="******" type="password">
-                                    </div> <!-- form-group// --> 
-                                    <div class="form-group"> 
-                                    <div class="checkbox">
-                                    <label> <input type="checkbox"> Save password </label>
-                                    </div> <!-- checkbox .// -->
-                                    </div> <!-- form-group// -->  
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block"> Login  </button>
-                                    </div> <!-- form-group// -->                                                           
-                                </form>
-                            </div>
+  <div class="col-md-6" style="background-color: #f7f9fb">
+    <div class="container h-100">
+      <div class="row h-100 w-100">
+        <div class="col-md-6 my-auto mx-auto">
+          <mat-card class="example-card">
+            <mat-card-header class="justify-content-center">
+              <div mat-card-avatar class="example-header-image"></div>
+            </mat-card-header>
+            <mat-card-title style="padding: 10px">Login</mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <form  class="example-form" style="padding-top: 20px;">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <mat-icon matSuffix>person</mat-icon>
+                        <input type="text" formControlName="username" matInput placeholder="" required>
+                    </mat-form-field>
+                    <mat-form-field class="example-form" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password" required>
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        
+                    </mat-form-field>
+                    <div class="row">
+                        <div class="col">
+                            <mat-checkbox class="caption float-left" color="primary">Remember Me</mat-checkbox>
+                        </div>
+                        <div class="col">
+                            <a  class="float-right">Forgot Password?</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        <!-- </div> -->
-    </div>
-    <div class="col-sm-6 hidden-sm hidden-xs carousel-hide" style="padding: 0%;">
-        <div class="carousel-bg">
-            <ngb-carousel *ngIf="images">
-                <ng-template ngbSlide>
-                <div class="picsum-img-wrapper">
-                    <img [src]="images[0]" alt="Random first slide">
-                </div>
-                <div class="carousel-caption">
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                <div class="picsum-img-wrapper">
-                    <img [src]="images[1]" alt="Random second slide">
-                </div>
-                <div class="carousel-caption">
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                </ng-template>
-            </ngb-carousel>
+                </form>
+            </mat-card-content>
+            <mat-card-actions align="end" style="padding-right: 20px; padding-bottom: 20px;">
+                <button mat-raised-button color="primary" >Sign Up</button>
+            </mat-card-actions>
+          </mat-card>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="col-sm-6 hidden-sm hidden-xs carousel-hide" style="padding: 0%">
+    <div class="carousel-bg">
+      <ngb-carousel>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="../../../assets/bg_2.jpg" alt="Random first slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="../../../assets/bg_3.jpg" alt="Random second slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
 </div>
-
-
