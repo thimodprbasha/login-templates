@@ -1,13 +1,15 @@
-<div class="row">
+<div class="row h-100 w-100">
   <div class="col-md-6" style="background-color: #f7f9fb">
-    <div class="container h-100">
       <div class="row h-100 w-100">
         <div class="col-md-6 my-auto mx-auto">
           <mat-card class="example-card">
-            <mat-card-header class="justify-content-center">
-              <div mat-card-avatar class="example-header-image"></div>
-            </mat-card-header>
-            <mat-card-title style="padding: 10px">Login</mat-card-title>
+            <div class="row ">
+                <div class="col-sm-4 mx-auto">
+                    <div mat-card-avatar class="example-header-image m-auto"></div>
+                </div>
+            </div>
+            <mat-card-title style="padding: 10px; font-size: 28px;">Login</mat-card-title>
+            <mat-card-subtitle style="padding-left: 10px;">Sign in with your credentials below.</mat-card-subtitle>
             <mat-divider></mat-divider>
             <mat-card-content>
                 <form  class="example-form" style="padding-top: 20px;">
@@ -34,15 +36,21 @@
                     </div>
                 </form>
             </mat-card-content>
-            <mat-card-actions align="end" style="padding-right: 20px; padding-bottom: 20px;">
-                <button mat-raised-button color="primary" >Sign Up</button>
+            <mat-card-actions>
+                <button class="example-form" mat-raised-button color="primary" >SIGN IN</button>
             </mat-card-actions>
+            <mat-card-footer>
+                <p class="text-secondary text-center">
+                    Don't have an account?<br/>
+                    <a href="/">Click here to create one</a>
+                </p>
+            </mat-card-footer>
           </mat-card>
         </div>
       </div>
-    </div>
+    
   </div>
-  <div class="col-sm-6 hidden-sm hidden-xs carousel-hide" style="padding: 0%">
+  <div class="col-sm-6 .d-none .d-sm-block .d-sm-none .d-md-block" style="padding: 0%">
     <div class="carousel-bg">
       <ngb-carousel>
         <ng-template ngbSlide>
